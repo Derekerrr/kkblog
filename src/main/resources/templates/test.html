@@ -1,11 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Demo</title>
     <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
     <link href="../static/layui/layui.css" rel="stylesheet">
+    <style>
+        body {
+            background: rgb(243, 243, 243);
+        }
+        .myui-card-footer {
+            font-size: 12px;
+            display: flex;
+        }
+        .layui-icon {
+           font-size: 12px;
+        }
+        .myui-gap {
+            margin-right: 10px;
+        }
+        .myui-card-content {
+            padding: 5px;
+        }
+        .myui-nickname {
+            font-size: 15px;
+        }
+        .layui-card {
+            display: flex;
+        }
+        .myui-avatar-container {
+            padding: 10px;
+        }
+        .myui-avatar-middle {
+            width: 60px;
+            height: 60px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
 <ul class="layui-nav">
@@ -27,6 +59,111 @@
         </dl>
     </li>
 </ul>
+<div class="layui-row">
+    <div class="layui-col-md2">
+        <div class="layui-panel">
+            <ul class="layui-menu" id="docDemoMenu1">
+                <li lay-options="{id: 100}">
+                    <div class="layui-menu-body-title">menu item 1</div>
+                </li>
+                <li class="layui-menu-item-divider"></li>
+                <li lay-options="{id: 101}">
+                    <div class="layui-menu-body-title">
+                        <a href="#">menu item 2 <span class="layui-badge-dot"></span></a>
+                    </div>
+                </li>
+                <li class="layui-menu-item-divider"></li>
+                <li lay-options="{id: 106}">
+                    <div class="layui-menu-body-title">menu item 6</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="layui-col-md6">
+        <div class="layui-card">
+            <div class="myui-avatar-container">
+                <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="myui-avatar-middle">
+            </div>
+            <div class="layui-card-body">
+                <div class="myui-card-header">
+                    <span class="myui-nickname">敏书</span>
+                </div>
+                <div class="myui-card-content">
+                    卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影
+                </div>
+                <div class="myui-card-footer">
+                    <div class="myui-gap">
+                        <i class="layui-icon layui-icon-star"></i>&nbsp点赞&nbsp<span>2121</span>
+                    </div>
+                    <div  class="myui-gap">
+                        <i class="layui-icon layui-icon-reply-fill"></i>&nbsp阅读&nbsp<span>2121</span>
+                    </div>
+                    <div  class="myui-gap">
+                        <i class="layui-icon layui-icon-read"></i>&nbsp浏览&nbsp<span>2121</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+        <div class="layui-card">
+            <div class="layui-card-header">卡片面板</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内<br>
+                从而映衬出边框投影
+            </div>
+        </div>
+    </div>
+    <div class="layui-col-md2">
+
+    </div>
+</div>
+
 
 <!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
 <script src="../static/layui/layui.js"></script>
