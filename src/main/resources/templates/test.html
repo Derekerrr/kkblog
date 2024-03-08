@@ -6,70 +6,7 @@
     <title>Demo</title>
     <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
     <link href="../static/layui/layui.css" rel="stylesheet">
-    <style>
-        body {
-            background: rgb(243, 243, 243);
-        }
-        .myui-card-footer {
-            font-size: 12px;
-            display: flex;
-            color: #707070;
-            position: relative;
-        }
-        .layui-icon {
-           font-size: 12px;
-        }
-        .myui-gap {
-            margin-right: 10px;
-        }
-        .myui-card-content {
-            /*padding: 5px;*/
-            padding-top: 5px;
-            padding-bottom: 5px;
-            font-size: 15px;
-            color: #707070;
-        }
-        .myui-nickname {
-            font-size: 18px;
-            font-weight: bold;
-            color: RGB(112,114,124);
-        }
-        .layui-card {
-            display: flex;
-        }
-        .myui-avatar-container {
-            padding-left: 10px;
-            padding-top: 10px;
-        }
-        .myui-avatar-middle {
-            width: 60px;
-            height: 60px;
-            border-radius: 10px;
-        }
-        .myui-top-tip {
-            border: solid 1px;
-            color: RGB(250,81,81);
-            font-size: 13px;
-            margin-left: 5px;
-            padding: 2px;
-        }
-        .myui-time-tip {
-            color: RGB(119,121,131);
-            font-size: 13px;
-            font-weight: bold;
-            float: right;
-        }
-        .myui-topic-tip {
-            text-align: center;
-            position: absolute;
-            margin-left: 93%;
-            height: 18px;
-            line-height: 18px;
-            width: 40px;
-            border: 1px #707070 solid;
-            border-radius: 10px;
-        }
-    </style>
+    <link href="../static/css/myui.css" rel="stylesheet">
 </head>
 <body>
 <ul class="layui-nav">
@@ -91,28 +28,45 @@
         </dl>
     </li>
 </ul>
-<div class="layui-row">
-    <div class="layui-col-md2">
+<div class="layui-row" style="margin-top: 10px;">
+    <div class="layui-col-md2 myui-col">
         <div class="layui-panel">
             <ul class="layui-menu" id="docDemoMenu1">
                 <li lay-options="{id: 100}">
-                    <div class="layui-menu-body-title">menu item 1</div>
-                </li>
-                <li class="layui-menu-item-divider"></li>
-                <li lay-options="{id: 101}">
-                    <div class="layui-menu-body-title">
-                        <a href="#">menu item 2 <span class="layui-badge-dot"></span></a>
+                    <div class="myui-menu-body-title">
+                        <img class="myui-top-image" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                        <span class="myui-topic-name">最新</span>
                     </div>
                 </li>
-                <li class="layui-menu-item-divider"></li>
-                <li lay-options="{id: 106}">
-                    <div class="layui-menu-body-title">menu item 6</div>
+                <li lay-options="{id: 100}">
+                    <div class="myui-menu-body-title myui-active">
+                        <img class="myui-top-image" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                        <span class="myui-topic-name">推荐</span>
+                    </div>
+                </li>
+                <li lay-options="{id: 100}">
+                    <div class="myui-menu-body-title">
+                        <img class="myui-top-image" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                        <span class="myui-topic-name">最新</span>
+                    </div>
+                </li>
+                <li lay-options="{id: 100}">
+                    <div class="myui-menu-body-title">
+                        <img class="myui-top-image" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                        <span class="myui-topic-name">最新</span>
+                    </div>
+                </li>
+                <li lay-options="{id: 100}">
+                    <div class="myui-menu-body-title">
+                        <img class="myui-top-image" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                        <span class="myui-topic-name">最新</span>
+                    </div>
                 </li>
             </ul>
         </div>
     </div>
-    <div class="layui-col-md6">
-        <div class="layui-card">
+    <div class="layui-col-md8 myui-col">
+        <div class="layui-card myui-card">
             <div class="myui-avatar-container">
                 <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="myui-avatar-middle">
             </div>
@@ -122,9 +76,44 @@
                     <span class="myui-top-tip">置顶</span>
                     <span class="myui-time-tip">发布于2024-23-12 12:12:21</span>
                 </div>
-                <div class="myui-card-titler">
-                    12121
+                <a class="myui-card-titler" target="_blank" href="http://localhost:8080">
+                    Go 语言社区系统 BBS-GO 4.0.0 发布，升级vue3、nuxt3
+                </a>
+                <div class="myui-card-content">
+                    卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
+                    从而映衬出边框投影
                 </div>
+                <div class="myui-card-footer">
+                    <div class="myui-gap">
+                        <i class="layui-icon layui-icon-star"></i>&nbsp点赞&nbsp<span>2121</span>
+                    </div>
+                    <div  class="myui-gap">
+                        <i class="layui-icon layui-icon-reply-fill"></i>&nbsp阅读&nbsp<span>2121</span>
+                    </div>
+                    <div  class="myui-gap">
+                        <i class="layui-icon layui-icon-read"></i>&nbsp浏览&nbsp<span>2121</span>
+                    </div>
+                    <div class="myui-topic-tip">开源撒撒</div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-card myui-card">
+            <div class="myui-avatar-container">
+                <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="myui-avatar-middle">
+            </div>
+            <div class="layui-card-body">
+                <div class="myui-card-header">
+                    <span class="myui-nickname">敏书</span>
+                    <span class="myui-top-tip">置顶</span>
+                    <span class="myui-time-tip">发布于2024-23-12 12:12:21</span>
+                </div>
+                <a class="myui-card-titler" target="_blank" href="http://localhost:8080">
+                    Go 语言社区系统 BBS-GO 4.0.0 发布，升级vue3、nuxt3
+                </a>
                 <div class="myui-card-content">
                     卡片式面板面板通常用于非白色背景色的主体内
                     从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
@@ -147,7 +136,7 @@
                 </div>
             </div>
         </div>
-        <div class="layui-card">
+        <div class="layui-card myui-card">
             <div class="myui-avatar-container">
                 <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="myui-avatar-middle">
             </div>
@@ -157,9 +146,9 @@
                     <span class="myui-top-tip">置顶</span>
                     <span class="myui-time-tip">发布于2024-23-12 12:12:21</span>
                 </div>
-                <div class="myui-card-titler">
-                    12121
-                </div>
+                <a class="myui-card-titler" target="_blank" href="http://localhost:8080">
+                    Go 语言社区系统 BBS-GO 4.0.0 发布，升级vue3、nuxt3
+                </a>
                 <div class="myui-card-content">
                     卡片式面板面板通常用于非白色背景色的主体内
                     从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
@@ -182,7 +171,7 @@
                 </div>
             </div>
         </div>
-        <div class="layui-card">
+        <div class="layui-card myui-card">
             <div class="myui-avatar-container">
                 <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="myui-avatar-middle">
             </div>
@@ -192,44 +181,9 @@
                     <span class="myui-top-tip">置顶</span>
                     <span class="myui-time-tip">发布于2024-23-12 12:12:21</span>
                 </div>
-                <div class="myui-card-titler">
-                    12121
-                </div>
-                <div class="myui-card-content">
-                    卡片式面板面板通常用于非白色背景色的主体内
-                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
-                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
-                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
-                    从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
-                    从而映衬出边框投影
-                </div>
-                <div class="myui-card-footer">
-                    <div class="myui-gap">
-                        <i class="layui-icon layui-icon-star"></i>&nbsp点赞&nbsp<span>2121</span>
-                    </div>
-                    <div  class="myui-gap">
-                        <i class="layui-icon layui-icon-reply-fill"></i>&nbsp阅读&nbsp<span>2121</span>
-                    </div>
-                    <div  class="myui-gap">
-                        <i class="layui-icon layui-icon-read"></i>&nbsp浏览&nbsp<span>2121</span>
-                    </div>
-                    <div class="myui-topic-tip">开源</div>
-                </div>
-            </div>
-        </div>
-        <div class="layui-card">
-            <div class="myui-avatar-container">
-                <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="myui-avatar-middle">
-            </div>
-            <div class="layui-card-body">
-                <div class="myui-card-header">
-                    <span class="myui-nickname">敏书</span>
-                    <span class="myui-top-tip">置顶</span>
-                    <span class="myui-time-tip">发布于2024-23-12 12:12:21</span>
-                </div>
-                <div class="myui-card-titler">
-                    12121
-                </div>
+                <a class="myui-card-titler" target="_blank" href="http://localhost:8080">
+                    Go 语言社区系统 BBS-GO 4.0.0 发布，升级vue3、nuxt3
+                </a>
                 <div class="myui-card-content">
                     卡片式面板面板通常用于非白色背景色的主体内
                     从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
@@ -254,7 +208,24 @@
         </div>
     </div>
     <div class="layui-col-md2">
+        <div class="layui-card">
+            <div class="layui-card-header myui-side-title">公告</div>
+            <div class="layui-card-body">
+                卡片式面板面板通常用于非白色背景色的主体内
+                从而映衬出边框投影
+            </div>
+        </div>
 
+        <div class="layui-card myui-side-card">
+            <div class="layui-card-header myui-side-title">积分排行</div>
+            <div class="layui-card-body">
+                <div>
+                    <img class="myui-avatar-small" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                    <hr>
+                    
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
