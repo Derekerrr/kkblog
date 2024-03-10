@@ -7,6 +7,30 @@
     <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
     <link href="../static/layui/layui.css" rel="stylesheet">
     <link href="../static/css/myui.css" rel="stylesheet">
+    <style>
+        .preview {
+            cursor: pointer;
+        }
+        .preview-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .preview-container .pic {
+            max-width: 90%;
+            max-height: 90%;
+            min-width: 5%;
+            min-height: 5%;
+            object-fit: contain;
+        }
+    </style>
 </head>
 <body>
 <ul class="layui-nav">
@@ -28,8 +52,8 @@
         </dl>
     </li>
 </ul>
-<div class="layui-row" style="margin-top: 10px;">
-    <div class="layui-col-md2 myui-col">
+<div class="layui-row layui-col-space10" style="margin-top: 10px;">
+    <div class="layui-col-md2">
         <div class="layui-panel">
             <ul class="layui-menu" id="docDemoMenu1">
                 <li lay-options="{id: 100}">
@@ -65,7 +89,7 @@
             </ul>
         </div>
     </div>
-    <div class="layui-col-md8 myui-col">
+    <div class="layui-col-md6" id="test">
         <div class="layui-card myui-card">
             <div class="myui-avatar-container">
                 <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="myui-avatar-middle">
@@ -122,6 +146,11 @@
                     从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
                     从而映衬出边框投影
                 </div>
+                <ul class="myui-image-ul layui-row">
+                    <li class="myui-image-li">
+                        <img class="myui-list-image pre_item" src="https://picsum.photos/400">
+                    </li>
+                </ul>
                 <div class="myui-card-footer">
                     <div class="myui-gap">
                         <i class="layui-icon layui-icon-star"></i>&nbsp点赞&nbsp<span>2121</span>
@@ -192,6 +221,29 @@
                     从而映衬出边框投影卡片式面板面板通常用于非白色背景色的主体内
                     从而映衬出边框投影
                 </div>
+                <ul class="myui-image-ul layui-row">
+                    <li class="myui-image-li">
+                        <img class="myui-list-image" src="https://picsum.photos/400">
+                    </li>
+                    <li class="myui-image-li">
+                        <img class="myui-list-image" src="https://picsum.photos/400">
+                    </li>
+                    <li class="myui-image-li">
+                        <img class="myui-list-image" src="https://picsum.photos/400">
+                    </li>
+                    <li class="myui-image-li">
+                        <img class="myui-list-image" src="https://picsum.photos/400">
+                    </li>
+                    <li class="myui-image-li">
+                        <img class="myui-list-image" src="https://picsum.photos/400">
+                    </li>
+                    <li class="myui-image-li">
+                        <img class="myui-list-image" src="https://picsum.photos/400">
+                    </li>
+                    <li class="myui-image-li">
+                        <img class="myui-list-image" src="https://picsum.photos/400">
+                    </li>
+                </ul>
                 <div class="myui-card-footer">
                     <div class="myui-gap">
                         <i class="layui-icon layui-icon-star"></i>&nbsp点赞&nbsp<span>2121</span>
@@ -207,7 +259,7 @@
             </div>
         </div>
     </div>
-    <div class="layui-col-md2">
+    <div class="layui-col-md3">
         <div class="layui-card">
             <div class="layui-card-header myui-side-title">公告</div>
             <div class="layui-card-body">
@@ -219,19 +271,92 @@
         <div class="layui-card myui-side-card">
             <div class="layui-card-header myui-side-title">积分排行</div>
             <div class="layui-card-body">
-                <div>
-                    <img class="myui-avatar-small" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                <div class="layui-row" style="margin-bottom: 5px">
+                    <div class="layui-col-md2" style="padding-top: 1%">
+                        <img class="myui-avatar-small" style="margin: auto;display: block" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                    </div>
+                    <div class="layui-col-md8" style="text-align: left">
+                        <div class="layui-row layui-font-14">秋天的落叶</div>
+                        <div class="layui-row layui-font-12" style="color: #6c6c70">673 帖子 • 1424 评论</div>
+                    </div>
+                    <div class="layui-col-md2 layui-font-14" style="display: flex;padding-top: 2%;color: #6c6c70">
+                        <i class="layui-icon layui-icon-dollar" style="font-size: 14px"></i>&nbsp;
+                        <span>32212</span>
+                    </div>
                     <hr>
-                    
+                </div>
+                <div class="layui-row" style="margin-bottom: 5px">
+                    <div class="layui-col-md2" style="padding-top: 1%">
+                        <img class="myui-avatar-small" style="margin: auto;display: block" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                    </div>
+                    <div class="layui-col-md8" style="text-align: left">
+                        <div class="layui-row layui-font-14">秋天的落叶</div>
+                        <div class="layui-row layui-font-12" style="color: #6c6c70">673 帖子 • 1424 评论</div>
+                    </div>
+                    <div class="layui-col-md2 layui-font-14" style="display: flex;padding-top: 2%;color: #6c6c70">
+                        <i class="layui-icon layui-icon-dollar" style="font-size: 14px"></i>&nbsp;
+                        <span>32212</span>
+                    </div>
+                    <hr>
+                </div>
+                <div class="layui-row" style="margin-bottom: 5px">
+                    <div class="layui-col-md2" style="padding-top: 1%">
+                        <img class="myui-avatar-small" style="margin: auto;display: block" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                    </div>
+                    <div class="layui-col-md8" style="text-align: left">
+                        <div class="layui-row layui-font-14">秋天的落叶</div>
+                        <div class="layui-row layui-font-12" style="color: #6c6c70">673 帖子 • 1424 评论</div>
+                    </div>
+                    <div class="layui-col-md2 layui-font-14" style="display: flex;padding-top: 2%;color: #6c6c70">
+                        <i class="layui-icon layui-icon-dollar" style="font-size: 14px"></i>&nbsp;
+                        <span>32212</span>
+                    </div>
+                    <hr>
                 </div>
             </div>
         </div>
     </div>
+    <div class="layui-col-md1"></div>
 </div>
-
-
 <!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
 <script src="../static/layui/layui.js"></script>
+<script>
+    // 获取所有 .preview 元素
+    document.getElementById('test').addEventListener("click",(e) =>{
+        e.preventDefault()
+        if (e.target.classList.contains('myui-list-image')) {
+            //创建预览器
+            let container = document.createElement("div");
+            container.classList.add("preview-container");
+            container.onclick = function() {
+                container.remove();
+            }
+            //创建预览图片
+            let innerImg = document.createElement("img");
+            innerImg.src = e.target.src;
+            innerImg.classList.add("pic");
+            //绑定滚动事件
+            container.onwheel = function (event) {
+                const width = getComputedStyle(innerImg).width.slice(0,-2);
+                const height = getComputedStyle(innerImg).height.slice(0,-2);
+                if (event.deltaY > 0) {
+                    //向上滚动放大
+                    innerImg.style.width = parseInt(width) * 1.1 + "px";
+                    innerImg.style.height = parseInt(height) * 1.1 + "px";
+                }else if (event.deltaY < 0) {
+                    //向下滚动缩小
+                    innerImg.style.width = parseInt(width) * 0.9 + "px";
+                    innerImg.style.height = parseInt(height) * 0.9 + "px";
+                }
+            }
+            //将图片添加到预览器
+            container.append(innerImg);
+            //将预览器添加到 body 中
+            document.body.append(container);
+        }
+
+    })
+</script>
 
 </body>
 </html>

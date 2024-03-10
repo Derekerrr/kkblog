@@ -117,13 +117,37 @@ body {
     margin-left: 5px;
     line-height: 28px
 }
-.myui-col {
-    margin-right: 10px;
-}
+
 .myui-side-title {
     font-size: 16px;
     font-weight: bold;
 }
 .myui-side-card {
     width: 100%;
+}
+
+.myui-image-ul {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+.myui-image-li {
+    white-space:nowrap;
+    line-height: 120px;
+    width: 120px;
+    height: 120px;
+    display: block;
+    float: left;
+    margin: 2px
+}
+.myui-list-image {
+    height: 100%;
+    width: 100%;
+    border-radius: 2px;
+    object-fit: cover;
+    transition-duration: 500ms;
+}
+.myui-list-image:hover {
+    height: 103%;
+    width: 103%;
 }

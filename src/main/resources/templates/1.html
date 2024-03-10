@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js点击图片预览</title>
+    <style>
+        .img{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+        .preview {
+            cursor: pointer;
+        }
+        .preview-container {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .preview-container .pic {
+            max-width: 90%;
+            max-height: 90%;
+            min-width: 5%;
+            min-height: 5%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+<img src="https://img0.baidu.com/it/u=1151663768,725447312&fm=253&fmt=auto&app=138&f=JPEG?w=800&h=500" alt="图片" class="img preview">
+<img src="https://img0.baidu.com/it/u=589809772,3230216964&fm=253&fmt=auto&app=120&f=JPEG?w=500&h=887" alt="图片" class="img preview">
+</body>
+</html>
+
+<script>
+    // 获取所有 .preview 元素
+    let arrPic = document.querySelectorAll(".preview")
+    for(let img of arrPic){
+        img.addEventListener("click",() =>{
+            //创建预览器
+            let container = document.createElement("div");
+            container.classList.add("preview-container");
+            container.onclick = function() {
+                container.remove();
+            }
+            //创建预览图片
+            let innerImg = document.createElement("img");
+            innerImg.src = img.src;
+            innerImg.classList.add("pic");
+            //绑定滚动事件
+            container.onwheel = function (event) {
+                const width = getComputedStyle(innerImg).width.slice(0,-2);
+                const height = getComputedStyle(innerImg).height.slice(0,-2);
+                if (event.deltaY > 0) {
+                    //向上滚动放大
+                    innerImg.style.width = parseInt(width) * 1.1 + "px";
+                    innerImg.style.height = parseInt(height) * 1.1 + "px";
+                }else if (event.deltaY < 0) {
+                    //向下滚动缩小
+                    innerImg.style.width = parseInt(width) * 0.9 + "px";
+                    innerImg.style.height = parseInt(height) * 0.9 + "px";
+                }
+            }
+            //将图片添加到预览器
+            container.append(innerImg);
+            //将预览器添加到 body 中
+            document.body.append(container);
+        })
+    }
+</script>

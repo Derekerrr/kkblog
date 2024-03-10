@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- 请勿在项目正式环境中引用该 layui.css 地址 -->
+    <link href="../static/layui/layui.css" rel="stylesheet">
+    <link href="../static/css/myui.css" rel="stylesheet">
+</head>
+<body>
+<ul class="layui-nav">
+    <li class="layui-nav-item">
+        <a href="">带徽章<span class="layui-badge">9</span></a>
+    </li>
+    <li class="layui-nav-item">
+        <a href="">小圆点<span class="layui-badge-dot"></span></a>
+    </li>
+    <li class="layui-nav-item" lay-unselect>
+        <a href="javascript:;">
+            <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="layui-nav-img">
+        </a>
+        <dl class="layui-nav-child">
+            <dd><a href="javascript:;">子级菜单</a></dd>
+            <dd><a href="javascript:;">横线隔断</a></dd>
+            <hr>
+            <dd style="text-align: center;"><a href="">退出</a></dd>
+        </dl>
+    </li>
+</ul>
+<div class="layui-container">
+    <div class="layui-row">
+        <div class="layui-col-md9">
+<!--            头像biao挑剔-->
+            <div class="layui-row">
+                <div class="layui-col-md2">
+                    <img class="myui-avatar-middle" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+                </div>
+                <div class="layui-col-md8">
+                    <div class="layui-row" style="text-align: left">GoFly全栈开发</div>
+                    <div class="layui-row"></div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-col-md3"></div>
+    </div>
+</div>
+
+</body>
+</html>
+<!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+<script src="../static/layui/layui.js"></script>
