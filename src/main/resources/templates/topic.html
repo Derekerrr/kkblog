@@ -220,19 +220,25 @@
 <script src="../static/jquery/jquery-3.7.1.min.js"></script>
 <script>
     let commentArea = " <div class=\"layui-row\">\n" +
-        "                                    <div class=\"layui-row\" style=\"margin-top: 10px\">\n" +
-        "                                        <textarea placeholder=\"请输入内容\" class=\"layui-textarea\"></textarea>\n" +
-        "                                    </div>\n" +
-        "                                    <div class=\"layui-row\" style=\"margin-top: 10px\">\n" +
-        "                                        <button type=\"submit\" class=\"layui-btn\" >发布</button>\n" +
-        "                                        <button type=\"reset\" class=\"layui-btn layui-btn-primary\">取消</button>\n" +
-        "                                    </div>\n" +
-        "                                </div>"
+        "                  <div class=\"layui-row\" style=\"margin-top: 10px\">\n" +
+        "                      <textarea placeholder=\"请输入内容\" class=\"layui-textarea\"></textarea>\n" +
+        "                  </div>\n" +
+        "                  <div class=\"layui-row\" style=\"margin-top: 10px\">\n" +
+        "                      <button type=\"submit\" class=\"layui-btn\" >发布</button>\n" +
+        "                      <button type=\"reset\" class=\"layui-btn layui-btn-primary\">取消</button>\n" +
+        "                  </div>\n" +
+        "              </div>"
+    let openedId = -1;
     openCommentArea = function (id) {
+        if (openedId !== -1 && openedId !== id) {
+            $('#comment-area-' + openedId).html('')
+        }
         let tag = $('#comment-area-' + id);
         if (tag.html().length === 0) {
+            openedId = id;
             tag.html(commentArea)
         } else {
+            openedId = -1;
             tag.html('')
         }
     }
