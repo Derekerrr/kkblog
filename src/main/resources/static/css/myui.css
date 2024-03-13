@@ -66,6 +66,12 @@ body {
     width: 55px;
     height: 55px;
 }
+.myui-avatar-large {
+    width: 80px;
+    height: 80px;
+    border-radius: 4px;
+    transition: 0.5s;
+}
 .myui-top-tip {
     border: solid 1px;
     color: RGB(250,81,81);
@@ -202,4 +208,37 @@ body {
 }
 .myui-icon-press:active {
     color: #1e9fff;
+}
+/*居中排布*/
+.myui-layout-center {
+    display: flex;
+    justify-content: center;
+}
+
+/*主题选择*/
+.myui-topic-selections {
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #e7e5e5;
+    color: #5b5b5b;
+    background-color: #efefef;
+    margin-right: 12px;
+}
+.myui-topic-selections.active {
+    color: white;
+    background-color: #326ff5;
+}
+.myui-topic-selections:hover {
+    cursor: pointer;
+    color: #074dc9;
+    background-color: #fffdfd;
+}
+
+/*输入框样式*/
+.myui-textarea {
+    height: 200px;
+    overflow-y: scroll;
 }

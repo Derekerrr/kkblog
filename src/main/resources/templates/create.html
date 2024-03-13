@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>发动态</title>
+    <link href="../static/layui/layui.css" rel="stylesheet">
+    <link href="../static/css/myui.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/publish.css" media="all">
+    <script type="text/javascript" src="../static/js/move.js"></script>
+    <script type="text/javascript" src="../static/js/publishImg.js"></script>
+</head>
+<body>
+    <ul class="layui-nav">
+        <li class="layui-nav-item">
+            <a href="">带徽章<span class="layui-badge">9</span></a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="">小圆点<span class="layui-badge-dot"></span></a>
+        </li>
+        <li class="layui-nav-item" lay-unselect>
+            <a href="javascript:;">
+                <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="layui-nav-img">
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">子级菜单</a></dd>
+                <dd><a href="javascript:;">横线隔断</a></dd>
+                <hr>
+                <dd style="text-align: center;"><a href="">退出</a></dd>
+            </dl>
+        </li>
+    </ul>
+    <div class="layui-container" style="margin-top: 15px">
+        <div class="layui-card" style="padding: 20px">
+            <div class="layui-row layui-font-30" style="font-weight: bold">
+                发动态
+            </div>
+            <div class="layui-row" style="display: flex;margin-top: 20px">
+                <div class="layui-font-14 myui-topic-selections active">交流</div>
+                <div class="layui-font-14 myui-topic-selections">交流</div>
+                <div class="layui-font-14 myui-topic-selections">交流</div>
+                <div class="layui-font-14 myui-topic-selections">交流</div>
+                <div class="layui-font-14 myui-topic-selections">交流</div>
+            </div>
+            <div class="layui-row">
+                <div class="layui-row">
+
+                </div>
+                <div class="layui-row">
+                    <textarea name="desc" resize="none" maxlength="10" placeholder="请输入内容" class="layui-textarea myui-textarea"></textarea>
+                </div>
+                <div class="layui-row" style="margin-top: 5px">
+                    <div type="button">
+                        <i class="layui-icon layui-icon-picture layui-font-26 myui-font-color-deep-gray" id="addZmImg"></i>
+                    </div>
+                    <div class="layui-row">
+                        <ul id="imgZmList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+<script src="../static/layui/layui.js"></script>
+<script src="../static/jquery/jquery-3.7.1.min.js"></script>
+<script>
+    // layui.config({
+    //     base: "../static/js/"
+    // })
+    //注意：选项卡 依赖 element 模块，否则无法进行功能性操作
+    layui.use(['form', 'upload'], function () {
+        var form = layui.form
+            , $ = layui.jquery
+            , upload = layui.upload;
+
+        //证明多图片上传
+        upload.render({
+            elem: '#addZmImg'
+            , url: '/user/upload.asp'
+            , multiple: true
+            , before: function (obj) {
+                //预读本地文件示例，不支持ie8
+                obj.preview(function (index, file, result) {
+                    $('#imgZmList').append('<li style="position:relative"><img name="imgZmList" src="' + result + '"width="150" height="113"><div class="title_cover" name="imgZmName" onclick="divClick(this)"></div><div class="img_close" onclick="deleteElement(this)">X</div></li>');
+                    form.render();
+                    imgMove("imgZmList");
+                });
+            }
+            , done: function (res) {
+                //上传完毕
+            }
+        });
+    });
+</script>
