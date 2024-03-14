@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <link href="../static/layui/layui.css" rel="stylesheet">
+    <link href="../static/css/myui.css" rel="stylesheet">
+</head>
+<style>
+    .myui-user-background {
+        height: 220px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        position: relative;
+    }
+    .myui-user-avatar-container {
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        position: absolute;
+        bottom: 40px;
+        left: 20px;
+        align-content: center;
+    }
+    .myui-user-avatar {
+        border-radius: 50%;
+        height: 98%;
+        width: 98%;
+        transition-duration: 500ms;
+    }
+    .myui-user-avatar:hover {
+        border-radius: 50%;
+        height: 100%;
+        width: 100%;
+    }
+</style>
+<body>
+    <ul class="layui-nav">
+        <li class="layui-nav-item">
+            <a href="">带徽章<span class="layui-badge">9</span></a>
+        </li>
+        <li class="layui-nav-item">
+            <a href="">小圆点<span class="layui-badge-dot"></span></a>
+        </li>
+        <li class="layui-nav-item" lay-unselect>
+            <a href="javascript:;">
+                <img src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg" class="layui-nav-img">
+            </a>
+            <dl class="layui-nav-child">
+                <dd><a href="javascript:;">子级菜单</a></dd>
+                <dd><a href="javascript:;">横线隔断</a></dd>
+                <hr>
+                <dd style="text-align: center;"><a href="">退出</a></dd>
+            </dl>
+        </li>
+    </ul>
+
+    <div class="layui-container" style="margin-top: 15px">
+        <div class="layui-card myui-user-background" style="background-image: url('https://s21.ax1x.com/2024/03/14/pFgtBE4.png');">
+            <div class="layui-row" style="position: absolute;bottom: 0;height: 85px;width: 100%;background-color: white;opacity: 60%"></div>
+            <div class="layui-row myui-user-avatar-container" style="">
+                <img class="myui-user-avatar" src="https://unpkg.com/outeres@0.0.10/demo/avatar/1.jpg">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<!-- 请勿在项目正式环境中引用该 layui.js 地址 -->
+<script src="../static/layui/layui.js"></script>
+<script src="../static/jquery/jquery-3.7.1.min.js"></script>
